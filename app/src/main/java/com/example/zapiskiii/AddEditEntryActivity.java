@@ -53,7 +53,7 @@ public class AddEditEntryActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent.hasExtra(EXTRA_ID)) {
-            setTitle("Edit Entry");
+            setTitle(getString(R.string.edit_entry));
             currentEntryId = intent.getIntExtra(EXTRA_ID, -1);
             diaryViewModel.getEntryById(currentEntryId).observe(this, entry -> {
                 if (entry != null) {
@@ -68,7 +68,7 @@ public class AddEditEntryActivity extends AppCompatActivity {
                 }
             });
         } else {
-            setTitle("Add Entry");
+            setTitle(getString(R.string.add_entry));
         }
 
         buttonAttachPhoto.setOnClickListener(v -> openFileChooser());
@@ -97,7 +97,7 @@ public class AddEditEntryActivity extends AppCompatActivity {
         String tags = editTextTags.getText().toString();
 
         if (title.trim().isEmpty() || content.trim().isEmpty()) {
-            Toast.makeText(this, "Please insert a title and content", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.fill_title_content), Toast.LENGTH_SHORT).show();
             return;
         }
 

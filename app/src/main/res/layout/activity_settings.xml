@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Theme"
+        android:text="@string/theme"
         android:textStyle="bold"
         android:layout_marginTop="8dp"/>
 
@@ -20,23 +20,23 @@
             android:id="@+id/radio_theme_system"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="System Default"/>
+            android:text="@string/theme_system"/>
         <RadioButton
             android:id="@+id/radio_theme_light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Light"/>
+            android:text="@string/theme_light"/>
         <RadioButton
             android:id="@+id/radio_theme_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dark"/>
+            android:text="@string/theme_dark"/>
     </RadioGroup>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Font Size"
+        android:text="@string/font_size"
         android:textStyle="bold"
         android:layout_marginTop="24dp"/>
 
@@ -48,17 +48,17 @@
             android:id="@+id/radio_font_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Small"/>
+            android:text="@string/font_small"/>
         <RadioButton
             android:id="@+id/radio_font_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium"/>
+            android:text="@string/font_medium"/>
         <RadioButton
             android:id="@+id/radio_font_large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Large"/>
+            android:text="@string/font_large"/>
     </RadioGroup>
 
 </LinearLayout>

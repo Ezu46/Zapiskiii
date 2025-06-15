@@ -23,9 +23,14 @@ public class MainActivity extends AppCompatActivity {
     private DiaryViewModel diaryViewModel;
     private DiaryEntryAdapter adapter;
     private int currentSort = 0; // 0 - date desc, 1 - date asc, 2 - title asc, 3 - title desc
-    private static final String[] SORT_OPTIONS = {
-            "По дате (новые)", "По дате (старые)", "По заголовку (А-Я)", "По заголовку (Я-А)"
+    private String[] getSortOptions() {
+    return new String[] {
+        getString(R.string.sort_by_date_new),
+        getString(R.string.sort_by_date_old),
+        getString(R.string.sort_by_title_az),
+        getString(R.string.sort_by_title_za)
     };
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                 diaryViewModel.delete(adapter.getEntryAt(viewHolder.getAdapterPosition()));
-                Toast.makeText(MainActivity.this, "Entry deleted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, getString(R.string.entry_deleted), Toast.LENGTH_SHORT).show();
             }
         }).attachToRecyclerView(recyclerView);
     }
@@ -112,13 +117,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void showSortDialog() {
         new androidx.appcompat.app.AlertDialog.Builder(this)
-                .setTitle("Сортировка")
-                .setSingleChoiceItems(SORT_OPTIONS, currentSort, (dialog, which) -> {
+                .setTitle(getString(R.string.sort_title))
+                .setSingleChoiceItems(getSortOptions(), currentSort, (dialog, which) -> {
                     currentSort = which;
                     observeSortedEntries();
                     dialog.dismiss();
                 })
-                .setNegativeButton("Отмена", null)
+                .setNegativeButton(getString(R.string.cancel), null)
                 .show();
     }
 

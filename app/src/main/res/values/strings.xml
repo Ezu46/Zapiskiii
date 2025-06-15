@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">Zapiskiii</string>
+    <!-- Main menu -->
+    <string name="search">Поиск</string>
+    <string name="sort">Сортировка</string>
+    <string name="settings">Настройки</string>
+    <string name="entry_deleted">Запись удалена</string>
+    <string name="sort_title">Сортировка</string>
+    <string name="sort_by_date_new">По дате (новые)</string>
+    <string name="sort_by_date_old">По дате (старые)</string>
+    <string name="sort_by_title_az">По заголовку (А-Я)</string>
+    <string name="sort_by_title_za">По заголовку (Я-А)</string>
+    <string name="cancel">Отмена</string>
+    <!-- Add/Edit Entry -->
+    <string name="add_entry">Новая запись</string>
+    <string name="edit_entry">Редактировать запись</string>
+    <string name="title_hint">Заголовок</string>
+    <string name="content_hint">Текст</string>
+    <string name="tags_hint">Теги (через запятую)</string>
+    <string name="attach_photo">Прикрепить фото</string>
+    <string name="save">Сохранить</string>
+    <string name="delete">Удалить</string>
+    <string name="fill_title_content">Пожалуйста, введите заголовок и текст</string>
+    <!-- Settings -->
+    <string name="theme">Тема</string>
+    <string name="theme_system">Системная</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="font_size">Размер шрифта</string>
+    <string name="font_small">Маленький</string>
+    <string name="font_medium">Средний</string>
+    <string name="font_large">Большой</string>
 </resources>

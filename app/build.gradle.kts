@@ -7,12 +7,12 @@ val lifecycle_version = "2.8.1"
 
 android {
     namespace = "com.example.zapiskiii"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.zapiskiii"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

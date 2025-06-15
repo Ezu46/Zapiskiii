@@ -35,7 +35,7 @@
                 android:id="@+id/edit_text_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Title"
+                android:hint="@string/title_hint"
                 android:inputType="textCapSentences" />
 
             <EditText
@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="Content"
+                android:hint="@string/content_hint"
                 android:inputType="textMultiLine" />
 
             <EditText
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="Tags (comma separated)"
+                android:hint="@string/tags_hint"
                 android:inputType="text" />
 
             <Button
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Attach Photo" />
+                android:text="@string/attach_photo" />
 
             <ImageView
                 android:id="@+id/image_view_photo"

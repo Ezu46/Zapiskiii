@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.Zapiskiii" parent="Base.Theme.Zapiskiii" />
+
+    <!-- Fix for missing overlays -->
+    <style name="Theme.Zapiskiii.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Zapiskiii.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -35,7 +35,7 @@ public class DiaryEntryAdapter extends ListAdapter<DiaryEntry, DiaryEntryAdapter
         if (idx == 0) fontSizeSp = 14;
         else if (idx == 1) fontSizeSp = 16;
         else if (idx == 2) fontSizeSp = 20;
-        notifyDataSetChanged();
+        submitList(getCurrentList());
     }
 
     private static final DiffUtil.ItemCallback<DiaryEntry> DIFF_CALLBACK = new DiffUtil.ItemCallback<DiaryEntry>() {
