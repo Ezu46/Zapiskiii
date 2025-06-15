@@ -72,6 +72,29 @@ public class DiaryEntryAdapter extends ListAdapter<DiaryEntry, DiaryEntryAdapter
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault());
         holder.textViewDate.setText(sdf.format(currentEntry.getDate()));
         holder.textViewDate.setTextSize(fontSizeSp - 4);
+
+        // Миниатюра фото
+        android.widget.ImageView imageViewThumb = ((android.widget.ImageView) holder.itemView.findViewById(R.id.image_view_thumbnail));
+        String imagePath = currentEntry.getImagePath();
+        if (imagePath != null && !imagePath.isEmpty()) {
+            java.io.File imgFile = new java.io.File(imagePath);
+            if (imgFile.exists()) {
+                // Используем Glide для загрузки миниатюры
+                try {
+                    com.bumptech.glide.Glide.with(holder.itemView.getContext())
+                        .load(imgFile)
+                        .centerCrop()
+                        .placeholder(R.drawable.ic_image_placeholder)
+                        .into(imageViewThumb);
+                } catch (Exception e) {
+                    imageViewThumb.setImageResource(R.drawable.ic_image_placeholder);
+                }
+            } else {
+                imageViewThumb.setImageResource(R.drawable.ic_image_placeholder);
+            }
+        } else {
+            imageViewThumb.setImageResource(R.drawable.ic_image_placeholder);
+        }
     }
 
     public DiaryEntry getEntryAt(int position) {
